@@ -15,14 +15,18 @@
  */
 package org.restexpress.example.echo;
 
-import java.util.Properties;
-
 import org.restexpress.Format;
 import org.restexpress.RestExpress;
 import org.restexpress.example.echo.controller.EchoController;
 import org.restexpress.example.echo.controller.StatusController;
 import org.restexpress.example.echo.controller.SuccessController;
 import org.restexpress.util.Environment;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 
 /**
  * @author toddf
@@ -58,6 +62,24 @@ extends Environment
 		this.defaultFormat = p.getProperty(DEFAULT_FORMAT_PROPERTY, Format.JSON);
 		this.workerCount = Integer.parseInt(p.getProperty(WORKER_COUNT_PROPERTY, String.valueOf(DEFAULT_WORKER_COUNT)));
 		this.executorThreadCount = Integer.parseInt(p.getProperty(EXECUTOR_THREAD_COUNT_PROPERTY, String.valueOf(DEFAULT_EXECUTOR_THREAD_COUNT)));
+	}
+
+	@Override
+	protected Properties readProperties(String environmentFile) throws FileNotFoundException, IOException {
+		Properties properties = new Properties();
+		FileInputStream fis = null;
+		try
+		{
+			File envFile = new File("E:\\RestExpress-Examples\\echo\\"+environmentFile);
+			fis = new FileInputStream(envFile);
+			properties.load(fis);
+			return properties;
+		}
+		catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		return super.readProperties(environmentFile);
 	}
 
 	public String getDefaultFormat()

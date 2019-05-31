@@ -15,7 +15,9 @@ public class Main
 	public static void main(String[] args) throws Exception
 	{
 		RestExpress.setSerializationProvider(new SerializationProvider());
-		Configuration config = Environment.load(args, Configuration.class);
+		String[] strs=new String[3];
+        strs[0]="dev";
+		Configuration config = Environment.load(strs, Configuration.class);
 		RestExpress server = new RestExpress()
 		    .setName(config.getName())
 		    .setPort(config.getPort());

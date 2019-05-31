@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="restexpress-benchmark-example" />
+        <module name="restexpress-blogging-example" />
+        <module name="restexpress-echo-example" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="restexpress-benchmark-example" target="1.7" />
+      <module name="restexpress-blogging-example" target="1.7" />
+      <module name="restexpress-echo-example" target="1.7" />
+      <module name="restexpress-examples" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

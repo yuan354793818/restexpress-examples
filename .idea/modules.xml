@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/benchmark/restexpress-benchmark-example.iml" filepath="$PROJECT_DIR$/benchmark/restexpress-benchmark-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blogging/restexpress-blogging-example.iml" filepath="$PROJECT_DIR$/blogging/restexpress-blogging-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/echo/restexpress-echo-example.iml" filepath="$PROJECT_DIR$/echo/restexpress-echo-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restexpress-examples.iml" filepath="$PROJECT_DIR$/restexpress-examples.iml" />
+    </modules>
+  </component>
+</project>
